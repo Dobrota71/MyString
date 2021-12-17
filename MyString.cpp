@@ -112,3 +112,20 @@ MyString::~MyString()
 {
 	delete[] this->str;
 }
+
+
+std::ostream& operator<<(std::ostream& out, MyString str)
+{
+	if (this->str == nullptr)
+		std::cout << "Error";
+	std::cout << this->str;
+	return out;
+}
+
+std::istream& operator>>(std::istream& in, MyString str)
+{
+	std::cin >> this->str;
+	return in;
+}
+
+

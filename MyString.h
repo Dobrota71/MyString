@@ -18,10 +18,9 @@ public:
 	bool operator==(const MyString& other);
 	bool operator!=(const MyString& other);
 	char& operator[](int index);
-	
-
+	friend std::ostream& operator<<(std::ostream& out, MyString str);
+	friend std::istream& operator>>(std::istream& in, MyString str);
 	int Size();
 	~MyString();
-
 };
 
